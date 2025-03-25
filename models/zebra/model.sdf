@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <model name="zebra">
+    <pose>0 0 0.75 0 0 0</pose>
+    <static>true</static>
+    <link name="link">
+      <collision name="collision">
+        <geometry>
+          <mesh>
+            <uri>model://zebra/meshes/zebra.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://zebra/meshes/zebra.dae</uri>
+            <scale>1 1 1</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <script>
+            <!-- <uri>model://zebra/materials/scripts/</uri>
+            <uri>model://zebra/materials/textures/</uri> -->
+            <uri>model://zebra/materials/scripts/zebra.material</uri>
+            <name>Zebra/Image</name>
+            <!-- <uri>model://grassplane/materials/scripts/grassplane.material</uri>
+            <name>GrassPlane/Image</name> -->
+            <!-- <uri>file://media/materials/scripts/gazebo.material</uri>
+            <name>Gazebo/Blue</name> -->
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <world name="default">
+    <scene>
+      <sky>
+        <clouds>
+          <speed>5</speed>
+        </clouds>
+      </sky>
+      <ambient>0.95 0.95 0.95 1</ambient>
+      <background>0.3 0.3 0.3 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <!-- sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <!-- grass -->
+    <include>
+      <uri>model://grassplane</uri>
+    </include>
+    <!-- zebra -->
+    <actor name="zebra">
+      <include>
+        <uri>model://zebra</uri>
+      </include>
+
+      <script>
+        <loop>true</loop>
+        <delay_start>0.0</delay_start>
+        <auto_start>true</auto_start>
+        
+        <trajectory id="0" type="square">
+          <waypoint>
+            <time>0.0</time>
+            <pose>-5 0 0.25 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>5.0</time>
+            <pose>5 0 0.25 0 0 3.14</pose>
+          </waypoint>
+          <waypoint>
+            <time>5.5</time>
+            <pose>5 0 0.25 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>8.0</time>
+            <pose>-5 0 0.25 0 0 0</pose>
+          </waypoint>
+          <waypoint>
+            <time>8.5</time>
+            <pose>-5 0 0.25 0 0 3.14</pose>
+          </waypoint>
+        </trajectory>
+      </script>
+    </actor>
+  </world>
+</sdf>

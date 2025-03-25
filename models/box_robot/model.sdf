@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="box_robot">
+    <pose>0 0 0 0 0 0</pose>
+
+    <link name="origin">
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <link name="x_link">
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <link name="y_link">
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <link name="theta_link">
+      <pose>0 0 0 0 0 0</pose>
+    </link>
+    <link name="box_link">
+      <pose>0 0 0.25 0 0 0</pose>
+      <visual name="visual_0">
+	<geometry>
+	  <box>
+	    <size>.5 .5 .5</size>
+	  </box>
+	</geometry>
+      </visual>
+    </link>
+
+    <joint name="world_joint" type="fixed">
+      <parent>world</parent>
+      <child>origin</child>
+    </joint>
+    <joint name="x_joint" type="prismatic">
+      <parent>origin</parent>
+      <child>x_link</child>
+      <axis>
+	<xyz>1.0 0 0</xyz>
+      </axis>
+    </joint>
+    <joint name="y_joint" type="prismatic">
+      <parent>x_link</parent>
+      <child>y_link</child>
+      <axis>
+	<xyz>0 1.0 0</xyz>
+      </axis>
+    </joint>
+    <joint name="theta_joint" type="revolute">
+      <parent>y_link</parent>
+      <child>theta_link</child>
+      <axis>
+	<xyz>0 0 1.0</xyz>
+      </axis>
+    </joint>
+    <joint name="box_joint" type="fixed">
+      <parent>theta_link</parent>
+      <child>box_link</child>
+    </joint>
+  </model>
+</sdf>
