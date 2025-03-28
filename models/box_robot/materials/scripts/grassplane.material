@@ -1,6 +1,5 @@
 material GrassPlane/Image
 {
-    receive_shadows off
     technique
     {
 		pass
@@ -13,7 +12,6 @@ material GrassPlane/Image
 			{
 			texture grass.jpg
 			filtering trilinear
-			scale 0.15 0.1
 			}	
 		}
     }

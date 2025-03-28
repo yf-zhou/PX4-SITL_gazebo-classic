@@ -1,0 +1,16 @@
+material BoxSkin/Image
+{
+  receive_shadows off
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+	  texture ../textures/aerial_zebras.jpg
+	  filtering trilinear
+	  scale 1 1
+      }
+    }
+  }
+}

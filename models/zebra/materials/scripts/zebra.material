@@ -11,7 +11,8 @@ material Zebra/Image
             
             texture_unit
             {
-                texture zebra_tiled_smaller.png
+                texture zebra_tiled_smaller.jpg
+		scale 2 2
             }
         }
     }
